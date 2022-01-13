@@ -1,0 +1,100 @@
+.section-3 {
+  position: relative;
+  padding: 60px 0 40px;
+  .lines {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    .line-1 {
+      border: 1px solid #cfcfcf;
+      width: 50px;
+    }
+    .line-2 {
+      border: 2px solid #18d26e;
+      width: 50px;
+    }
+    .line-3 {
+      border: 1px solid #cfcfcf;
+      width: 50px;
+    }
+  }
+  h3 {
+    text-transform: uppercase;
+    font-size: 32px;
+    color: #111;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px 0 5px;
+  }
+  p {
+    text-align: center;
+    color: #333;
+    padding-bottom: 30px;
+  }
+
+  .gridas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 15px;
+
+    .itemas {
+      margin: 0 0 30px;
+      padding: 0 12px;
+
+      .bi {
+        font-size: 36px;
+        color: #18d26e;
+        position: absolute;
+      }
+
+      p {
+        margin: 0 0 0 60px;
+        text-align: start;
+      }
+
+      .pav {
+        margin: 5px 0 15px 60px;
+
+        .pa-1 {
+          color: #111;
+          font-weight: 700;
+          font-size: 18px;
+          transition: 1s;
+        }
+        .pa-2 {
+          color: #111;
+          font-weight: 700;
+          font-size: 18px;
+          transition: 1s;
+        }
+        .pa-3 {
+          color: #111;
+          font-weight: 700;
+          font-size: 18px;
+          transition: 1s;
+        }
+        .pa-4 {
+          color: #111;
+          font-weight: 700;
+          font-size: 18px;
+          transition: 1s;
+        }
+        .pa-5 {
+          color: #111;
+          font-weight: 700;
+          font-size: 18px;
+          transition: 1s;
+        }
+        .pa-6 {
+          color: #111;
+          font-weight: 700;
+          font-size: 18px;
+          transition: 1s;
+        }
+      }
+    }
+  }
+}

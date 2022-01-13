@@ -1,0 +1,91 @@
+// Karuselės ID Tag
+
+#carouselExampleCaptions {
+  position: static;
+
+  // Karuselės Tekstas
+
+  .carousel-caption {
+    z-index: 1;
+    h2 {
+      font-size: 48px;
+    }
+    p {
+      font-size: 16px;
+    }
+
+    // Get Started Mygtukas
+    .get-started {
+      background-color: #18d26e;
+      color: #ffffff;
+      border-radius: 50px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 16px;
+      display: inline-block;
+      padding: 8px 32px;
+      margin: 10px;
+      transition: 0.5s;
+    }
+    // Get Started HOVER
+    .get-started:hover {
+      color: #18d26e;
+      background-color: #ffffff;
+    }
+  }
+
+  //   Foto
+  .carousel-inner {
+    .foto-1 {
+      background-image: url(img/img-1.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+    }
+    .foto-2 {
+      background-image: url(img/img-2.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+    }
+    .foto-3 {
+      background-image: url(img/img-3.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+    }
+    .foto-4 {
+      background-image: url(img/img-4.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+    }
+    .foto-5 {
+      background-image: url(img/img-5.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+    }
+  }
+}
+
+// Nuotraukų Tamsinimas
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
