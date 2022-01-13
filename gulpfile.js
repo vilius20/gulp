@@ -1,4 +1,5 @@
 const { src, dest, series, watch } = require("gulp");
+const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const csso = require("gulp-csso");
 const include = require("gulp-file-include");
@@ -8,7 +9,8 @@ const concat = require("gulp-concat");
 const autoprefixer = require("gulp-autoprefixer");
 const sync = require("browser-sync").create();
 const minify = require("gulp-minify");
-const gulp = require("gulp");
+const imageminJpegtran = require("imagemin-jpegtran");
+const webp = require("gulp-webp");
 
 function html() {
   return src("src/**.html")
@@ -37,23 +39,31 @@ function scss() {
 
 // img folderio nuotraukos
 function pic() {
-  return src("src/img/**.{jpeg,jpg,gif}").pipe(dest("ready/img"));
+  return src("src/img/**.{jpeg,jpg,gif,png}").pipe(dest("ready/img"));
 }
 
 // section 2 Nuotraukos
 function section_2() {
-  return src("src/img/section-2/**.{jpeg,jpg,gif}").pipe(
+  return src("src/img/section-2/**.{jpeg,jpg,gif,png}").pipe(
     dest("ready/img/section-2")
   );
 }
 
 // section 4 nuotraukos
 function section_4() {
-  return src("src/img/section-4/**.{jpeg,jpg,gif}").pipe(
+  return src("src/img/section-4/**.{jpeg,jpg,gif,png}").pipe(
     dest("ready/img/section-4")
   );
 }
 
+// section 6 nuotraukos
+function section_6() {
+  return src("src/img/section-6/**.{jpeg,jpg,gif,png}").pipe(
+    dest("ready/img/section-6")
+  );
+}
+
+// Delete Funkcija
 async function clear() {
   del("ready");
 }
@@ -69,6 +79,20 @@ function jsmini() {
     .pipe(dest("ready/js"));
 }
 
+// Nuotrauku Optimizavimas Ir Perkėlimas
+// async function fotomini() {
+//   const imagemin = (await import("imagemin")).default;
+//   const files = await imagemin(["img/*.{jpg,png}"], {
+//     destination: "ready/img",
+//     plugins: [imageminJpegtran()],
+//   });
+// }
+
+// WebP Konvertavimas
+// function fotowebp() {
+//   return src("ready/img/*.{jpeg,jpg,png}").pipe(webp()).pipe(dest("ready/img"));
+// }
+
 function serve() {
   sync.init({
     server: "./ready",
@@ -80,6 +104,10 @@ function serve() {
   watch("src/js/**.js", series(jsmini)).on("change", sync.reload);
   watch("src/img/**.{jpeg,jpg,gif}", series(pic)).on("change", sync.reload);
   watch("src/img/section-4/**.{jpeg,jpg,gif}", series(pic)).on(
+    "change",
+    sync.reload
+  );
+  watch("src/img/section-6/**.{jpeg,jpg,gif}", series(pic)).on(
     "change",
     sync.reload
   );
@@ -97,9 +125,23 @@ exports.start = series(
   pic,
   section_2,
   section_4,
+  section_6,
+  // fotomini,
+  // fotowebp,
   serve
 );
 
-exports.reload = series(html, scss, jsmini, pic, section_2, section_4, serve);
+exports.reload = series(
+  html,
+  scss,
+  jsmini,
+  pic,
+  section_2,
+  section_4,
+  section_6,
+  // fotomini,
+  // fotowebp,
+  serve
+);
 
 exports.delete = series(clear);
