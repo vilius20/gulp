@@ -63,6 +63,13 @@ function section_6() {
   );
 }
 
+// section 10 nuotraukos
+function section_10() {
+  return src("src/img/section-10/**.{jpeg,jpg,gif,png}").pipe(
+    dest("ready/img/section-10")
+  );
+}
+
 // Delete Funkcija
 async function clear() {
   del("ready");
@@ -126,6 +133,7 @@ exports.start = series(
   section_2,
   section_4,
   section_6,
+  section_10,
   // fotomini,
   // fotowebp,
   serve
@@ -139,6 +147,7 @@ exports.reload = series(
   section_2,
   section_4,
   section_6,
+  section_10,
   // fotomini,
   // fotowebp,
   serve

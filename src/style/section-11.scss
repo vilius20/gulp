@@ -1,0 +1,163 @@
+.section-11 {
+  .php-email-form {
+    margin-top: 100px;
+    .name-email {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1260px;
+
+      .name {
+        width: 90%;
+        .neimas {
+          padding: 10px 14px;
+          width: 97%;
+        }
+      }
+      .email {
+        width: 90%;
+        text-align: end;
+        .emailas {
+          padding: 10px 14px;
+          width: 97%;
+        }
+      }
+    }
+    .tema {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 1260px;
+      .tema-input {
+        width: 100%;
+        padding: 10px 14px;
+      }
+    }
+    .zinute {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 1260px;
+      .zinute-input {
+        padding: 10px 14px;
+        font-size: 15px;
+        box-shadow: none;
+        line-height: 30px;
+        width: 100%;
+        resize: none;
+      }
+    }
+    .mygtuk {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 1260px;
+      text-align: center;
+      button {
+        text-align: center;
+        background: #18d26e;
+        border: 0;
+        padding: 10px 30px;
+        color: #fff;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #0e7e42;
+      }
+    }
+  }
+  .informacija {
+    .lines {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0 0 30px 0;
+      .line-1 {
+        color: #cfcfcf;
+        display: block;
+        width: 50px;
+        height: 1px;
+        opacity: 1;
+      }
+      .line-2 {
+        color: #18d26e;
+        display: block;
+        width: 40px;
+        height: 3px;
+        opacity: 1;
+      }
+      .line-3 {
+        color: #cfcfcf;
+        width: 50px;
+        height: 1px;
+        opacity: 1;
+      }
+    }
+    .kontaktas {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 32px;
+      font-weight: 700;
+      margin-top: 100px;
+    }
+    .info-kont {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+  .info-dez {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    .info-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 416px;
+      h3 {
+        color: #999999;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      .bi {
+        color: #18d26e;
+        font-size: 48px;
+      }
+      address {
+        color: #000000;
+        font-size: 16px;
+      }
+      a {
+        color: #000;
+      }
+    }
+    .info-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 416px;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      h3 {
+        color: #999999;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      .bi {
+        color: #18d26e;
+        font-size: 48px;
+      }
+      a {
+        color: #000;
+      }
+    }
+  }
+}
